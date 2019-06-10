@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript">
+        function showFileName() {
+            var fil = document.getElementById("myFile");
+            alert(fil.value);
+        }
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <form method="GET" action="photoEditor.html">
+        <input type='file' name="image">
+        <button type="submit"> Submit </button>
+    </form>
+
+    <form id="frmMain" name="frmMain">
+        <input type="file" id="myFile" name="myFile" />
+        <a href="#" onclick="showFileName()">Show Name</a>
+    </form>
+</body>
+<script></script>
+
+</html>

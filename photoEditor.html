@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="processing.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="Restart()">Reset</button><br />
+    <p></p>
+    <form id="myFile">
+        <input accept="image/*" onchange="openFile(event)" type="file" /><br />
+        <br /></form>
+    <input id="Input" max="200" min="1" name="points" oninput="Update()" type="range" /><br />
+    <div id="Value">
+        Image size: 100</div>
+    <canvas height="100" id="myCanvas" style="border: 1px solid #000000;" width="100">Sorry but your browser does not
+        support the HTML canvas tag. You might need to update your browser.</canvas><br />
+    Your Code<br />
+    &nbsp; &nbsp; &nbsp; ||<br />
+    &nbsp; &nbsp; &nbsp; \/<br />
+    <textarea cols="100" id="myTA" placeholder="Follow the instructions to get your code." readonly=""
+        rows="10"></textarea>
+    <script>
+        pix = 100;
+        function Update() {
+            var Input = document.getElementById('Input').value;
+            document.getElementById('Value').innerHTML = 'Image size: ' + Input;
+            pix = Input;
+            var c = document.getElementById("myCanvas");
+            c.width = pix;
+            c.height = pix;
+            console.log(Input);
+        };
+        var openFile = function (event) {
+            var input = event.target;
+            var reader = new FileReader();
+            var Input = document.getElementById('Input');
+            Input.disabled = true;
+            reader.onload = function () {
+                var dataURL = reader.result;
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                var img = document.createElement("img");
+                img.id = 'myImg';
+                img.src = dataURL;
+                ctx.drawImage(img, 0, 0, pix, pix);
+                var tex = ctx.getImageData(0, 0, pix, pix).data;
+
+                document.getElementById('myTA').innerHTML = '//Generator (by me) http://kennys-programs.blogspot.com/p/hi.html\n\
+var imgData = ['+ tex + '];\n\
+var d = 0;\n\
+scale(width/'+ pix + ', height/' + pix + ');\n\
+background(255, 255, 255, 0);\n\
+for(var i = 0; i < imgData.length; i+=4){\n\
+    stroke(imgData[i], imgData[i+1], imgData[i+2], imgData[i+3]);\n\
+    point(i/4, 0);\n\
+    d += 1;\n\
+    if(d === '+ pix + '){\n\
+        translate(-'+ pix + ', 1);\n\
+        d-='+ pix + ';\n\
+    }\n\
+}';
+            };
+            reader.readAsDataURL(input.files[0]);
+        };
+        function Restart() {
+            window.location.reload();
+        };
+    </script>
+</body>
+
+</html>
