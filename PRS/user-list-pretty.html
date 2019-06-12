@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link ref="stylesheet" href="styles.css">
+    <style>
+        .bg-lightgray {
+            background-color: lightgray;
+        }
+
+        .right-container {
+            float: right;
+            margin-left: 10px;
+        }
+
+        .left-container {
+            float: left;
+            margin-right: 10px;
+        }
+
+        .block-container {
+            display: block;
+        }
+
+        .summary {
+            width: 100%;
+            margin: 0;
+        }
+
+        .personal {
+            min-width: 20%;
+            max-width: 30%;
+            height: 100%;
+            float: left;
+        }
+
+        .info {
+            align-items: center;
+            width: 100%;
+        }
+
+        .parent-container {
+            width: 90%;
+            margin: auto;
+            margin-top: 10px;
+            display: flex;
+
+        }
+
+        .list-inline {
+            display: block;
+        }
+
+        .list-inline li {
+            display: inline-block;
+        }
+
+        .list-inline li:before {
+            content: '\2022';
+            margin: 0 10px;
+        }
+
+        @media screen and (max-width: 800px) {
+
+            .parent-container {
+                width: 1000px;
+                margin: auto;
+                display: block;
+            }
+
+            .left-container {
+                width: 100%;
+                display: block;
+                margin: auto;
+            }
+
+            .right-container {
+                width: 100%;
+                display: block;
+                margin: auto;
+            }
+
+            .block-container {
+                display: block;
+                margin: auto;
+            }
+
+            .summary {
+                width: 100%;
+                height: 100%;
+                margin: auto;
+                margin-left: 10px;
+                display: block;
+            }
+
+            .personal {
+                width: 100%;
+                height: 100%;
+                display: block;
+                margin: auto;
+            }
+
+            .info {
+                align-content: center;
+                width: 100%;
+            }
+
+            .profile-picture {
+                display: inline;
+            }
+
+            .profile {
+                display: flex;
+                width: 100%;
+                margin: auto;
+            }
+        }
+    </style>
+    <script src="user-list-pretty.js"></script>
+    <title>Users</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <a href="home.html">
+                <img src="PRSLogos/Logo.svg" alt="Logo" width="200px">
+            </a>
+        </div>
+    </header>
+    <div class="sidenav">
+        <ul>
+            <li>
+                <a href="home.html">Home</a>
+            </li>
+            <li>
+                <a href="sad.html">Sad Image</a>
+            </li>
+            <li>
+                <a href="easyboy.html">Easy Boy</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="parent-container">
+        <div class="table block-container">
+            <div class="row info">
+                <div class="shadow p-3 mb-5 container col-sm bg-lightgray summary rounded" name="userList"
+                    id="userList">
+                    <h3>
+                        Users
+                    </h3>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

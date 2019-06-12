@@ -1,0 +1,263 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    padding: 10px;
+    background-image: url('images/art-black-and-white-counter-2341290.jpg');
+    image-rendering: optimizeQuality;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input {
+    background-color: gray;
+    border-style: none;
+}
+
+form.charSheet {
+    width: 1400px;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+}
+
+form.charSheet header div.header {
+    width: 100%;
+    display: flex;
+    align-content: stretch;
+    align-items: stretch;
+}
+
+form.charSheet main div.stats {
+    width: 50%;
+}
+
+form.charSheet main div.stats ul.stats {
+    display: flex;
+    /* align-content: stretch;
+    align-items: stretch; */
+}
+
+form.charSheet main div.stats ul.stats li {
+    display: flex;
+    align-items: center;
+}
+
+/* form.charSheet main div.stats ul.stats li > * {
+    margin-left: 5px;
+  } */
+
+.header {}
+
+.header h1 {
+    font-size: 50px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    width: 1000px;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.sidenav {
+    overflow: hidden;
+    background-color: #333;
+    width: 100%;
+}
+
+.sidenav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.sidenav ul {
+    display: block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.topnav a:hover {
+    background-color: green;
+    stroke: black;
+    color: black;
+}
+
+.leftcolumn {
+    float: left;
+    width: 80%;
+}
+
+.rightcolumn {
+    float: right;
+    width: 20%;
+    padding-left: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+    .leftcolumn, .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sidenav {
+        overflow: hidden;
+        background-color: #333;
+        width: 1000px;
+    }
+}
+
+.bg-lightgray {
+    background-color: lightgray;
+}
+
+.right-container {
+    float: right;
+    margin-left: 10px;
+}
+
+.left-container {
+    float: left;
+    margin-right: 10px;
+}
+
+.block-container {
+    display: block;
+}
+
+.summary {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 0 !important;
+}
+
+.personal {
+    min-width: 20%;
+    max-width: 30%;
+    height: 100%;
+    float: left;
+}
+
+.info {
+    align-items: center;
+    width: 1000px;
+    margin-top: 5px;
+}
+
+.parent-container {
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+}
+
+.list-inline {
+    display: block;
+}
+
+.list-inline li {
+    display: inline-block;
+}
+
+.list-inline li:before {
+    content: '\2022';
+    margin: 0 10px;
+}
+
+@media screen and (max-width: 1000px) {
+    .parent-container {
+        width: 1000px;
+        margin: auto;
+        display: block;
+    }
+    .left-container {
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+    .right-container {
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+    .block-container {
+        display: block;
+        margin: auto;
+    }
+    .summary {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+        display: block;
+    }
+    .personal {
+        width: 100%;
+        height: 100%;
+        display: block;
+        margin: auto;
+    }
+    .info {
+        align-content: center;
+        width: 100%;
+    }
+    .profile-picture {
+        display: inline;
+    }
+    .profile {
+        display: flex;
+        width: 100%;
+        margin: auto;
+    }
+}
